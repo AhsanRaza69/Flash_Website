@@ -9,9 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'hero-pattern': "url('https://themegrilldemos.com/flash/wp-content/uploads/sites/6/2022/11/counterbackground.jpg')",
+        
+      },
+      // fontFamily:{
+      //   bodyFont: ["Urbanist", ...defaultTheme.fontFamily.sans],
+      //  },
+       colors: {
+        bodyColor: "#fbfaf7",
+        webBlue: "#30afb8",
+        darkText: "#777",
+        darkcolor: "#353D4A",
       },
     },
   },

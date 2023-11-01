@@ -1,8 +1,18 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import './globals.css'
+import TopHeader from '@/components/topHeader'
+import Header from '@/components/Header'
+import "slick-carousel/slick/slick.css";
+import Footer from '@/components/footer/Footer'
+import Uparrow from '@/components/Uparrow'
 
-const inter = Inter({ subsets: ['latin'] })
+const montserrat = Montserrat({
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +26,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${montserrat.className} w-full`}>
+      <TopHeader/>
+      <Header/>
+        {children}
+        <Uparrow/>
+        <Footer/>
+        </body>
     </html>
   )
 }
