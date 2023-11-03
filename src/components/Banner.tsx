@@ -51,6 +51,7 @@ const Banner = () => {
           alt="bannerImage"
           width={1000}
           height={600}
+          priority
           
            className=" w-full h-full relative" />
            <BannerText title="One Click Demo Importer" para=" Drag and drop builder makes it possible to create any kind of layout you wish for." linkName="download more" Linked="/"/>

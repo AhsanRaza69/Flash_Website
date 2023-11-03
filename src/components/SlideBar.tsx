@@ -5,11 +5,11 @@ import BlogLink from './blog/BlogLink'
 
 const SlideBar = () => {
   return (
-    <div className=" flex flex-col gap-y-4  px-4  py-8   ">
+    <div className=" flex flex-col gap-y-4  px-4  py-4 md:py-0   ">
                 {/* search  */}
-              <div className=' bg-white flex  w-full   md:pr-14 my-2  py-2 '>
+              <div className=' bg-white flex  w-full mb-4   md:pr-14  '>
                             <input type="text"
-                            className=' placeholder:text-sm border-black   border-b-[1px] w-full py-2 px-2 pb-1 '
+                            className=' text-sm texdarte placeholder:text-sm border-black   border-b-[1px] w-full py-2 px-2 pb-1 '
                             placeholder='Search...'
 
                             />

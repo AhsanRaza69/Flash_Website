@@ -6,20 +6,28 @@ const Uparrow = () => {
     const [ShowButton, setShowButton] = useState(false)
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
+    
       };
     
-    //   useEffect(()=>{
-    //     const handleScroll = () => {
-    //         if (window.scrollY > 500) {
-    //           setShowButton(true);
-    //         } else {
-    //           setShowButton(false);
-    //         }
-    //   })
+      useEffect(()=>{
+        const handleScroll = () => {
+            if (window.scrollY > 100) {
+              setShowButton(true);
+            } else {
+              setShowButton(false);
+            }
+          }
+      },[setShowButton])
     
   return (
-    <div onClick={scrollToTop} className=' bg-webBlue text-white p-4 right-3 bottom-3 rounded-md cursor-pointer text-xl opacity-50 fixed'>
+    <div className="">
+      {
+        ShowButton && (
+          <div onClick={scrollToTop} className={`  bg-webBlue text-white p-4 right-3 bottom-3 rounded-md cursor-pointer text-xl opacity-50 fixed`}>
         <IoIosArrowUp/>
+    </div>
+        )
+      }
     </div>
   )
 }

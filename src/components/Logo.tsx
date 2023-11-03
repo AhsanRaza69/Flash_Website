@@ -6,8 +6,8 @@ import Link from 'next/link'
 const Logo = () => {
   return (
     <Link href="/">
-      <div className=' outline-none object-cover'>
-        <Image alt='Logo' src="/images/logo.png" width={110} height={110}/>
+      <div className=' outline-none object-cover '>
+        <Image alt='Logo' src="/images/logo.png" className=' w-[90px] md:auto' width={110} height={110}/>
     </div>
     </Link>
   )
