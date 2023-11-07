@@ -2,7 +2,9 @@
 const nextConfig = {
     images: {
         domains: [
-          "themegrilldemos.com"
+          "themegrilldemos.com",
+          "img.freepik.com",
+          "images.pexels.com"
         ],
       },
 }

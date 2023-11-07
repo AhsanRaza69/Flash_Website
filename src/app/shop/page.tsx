@@ -1,11 +1,17 @@
 import Container from '@/components/Container'
+import ProductCart from '@/components/ProductCart'
 import SlideBar from '@/components/SlideBar'
+import Image from 'next/image'
 import Link from 'next/link'
+import { getProducts } from '@/helper'
 
 import React from 'react'
 import { MdKeyboardArrowRight } from 'react-icons/md'
+import { Products } from '../../../type'
 
-const shopPage = () => {
+const shopPage = async() => {
+
+  const Product = await getProducts()
   return (
     <div>
       <div className=" bg-darkText/5 ">
@@ -22,8 +28,31 @@ const shopPage = () => {
          </span>
           </div>
         </div>
-        <Container className="grid grid-cols-1 md:grid-cols-3 gap-y-6  ">
-          <div className=" bg-red-500 w-full col-span-2  h-screen">    </div>
+        <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6  ">
+          <div className="  w-full col-span-2  ">  
+          <div className=" flex items-center justify-between w-full">
+            <h3 className=' text-darkText'>Showing all 8 results
+             </h3>
+               <label htmlFor="">
+                
+                <select  className=' dark:hover:bg-webBlue border border-black  group  text-gray-500 w-[200px]'>
+                  <option  className='' selected value="">Deafault sorting</option>
+                  <option  value="">Sort by average rating</option>
+                  <option  value="">Sort by latest</option>
+                  <option  value="">Sort by price: low to high</option>
+                  <option  value="">Sort by price: high to low</option>
+                </select >
+               </label>
+          </div>
+          <div className=" grid grid-cols-2 lg:grid-cols-4 items-center gap-8">
+           {
+           Product.map((item:Products)=>(
+            <ProductCart item={item} key={item._id}/>
+           ))
+           }
+           
+          </div>
+            </div>
           <SlideBar/>
         </Container>
     </div>
@@ -31,3 +60,10 @@ const shopPage = () => {
 }
 
 export default shopPage
+
+export function generateMetadata(){
+  return{
+    title:"Shop-Flash",
+    description:"shop page description"
+  }
+}

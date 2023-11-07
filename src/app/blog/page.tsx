@@ -31,3 +31,10 @@ const BlogPage = () => {
 }
 
 export default BlogPage
+
+export function generateMetadata(){
+  return{
+    title:"Blog-Flash",
+    description:"blog page description"
+  }
+}
