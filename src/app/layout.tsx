@@ -6,6 +6,7 @@ import Header from '@/components/Header'
 import "slick-carousel/slick/slick.css";
 import Footer from '@/components/footer/Footer'
 import Uparrow from '@/components/Uparrow'
+import Layout from '@/components/Layout'
 
 const montserrat = Montserrat({
   weight: ['400', '700'],
@@ -27,11 +28,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.className} w-full`}>
+        <Layout>
       <TopHeader/>
       <Header/>
         {children}
         <Uparrow/>
         <Footer/>
+        </Layout>
         </body>
     </html>
   )

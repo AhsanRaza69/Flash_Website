@@ -18,9 +18,10 @@ export const ShopSlice = createSlice({
     reducers:{
         addToCart:(state,action)=>{
            console.log("added")
+           state.userInfo= "Sd"
         }    
     }
 })
 
-export const {} = ShopSlice.actions
+export const {addToCart} = ShopSlice.actions
 export default ShopSlice.reducer

@@ -1,6 +1,9 @@
+"use client"
 import Image from 'next/image'
+
 import { useDispatch } from 'react-redux/es/exports'
 import { Products } from '../../type'
+import { addToCart } from '@/redux/ShopingSlice'
 
 
 interface Props{
@@ -8,7 +11,7 @@ interface Props{
 }
 
 const ProductCart = ({item}:Props) => {
-  const dispatch = useDispatch
+  const dispatch = useDispatch()
   return (
     <div className=" flex flex-col  overflow-hidden py-4 gap-y-2">
        <div className="  relative  w-full ">
@@ -19,7 +22,9 @@ const ProductCart = ({item}:Props) => {
        <h2 className=' mt-2 font-normal'>{item.title}</h2>
        <p className=' text-webBlue text-sm'>$3:00</p>
        <div>
-       <button className=' bg-webBlue text-sm font-semibold border-white text-white px-4 py-1 rounded-md'>Add to Cart</button>
+       <button
+       onClick={()=>dispatch(addToCart("hbh"))}
+       className=' bg-webBlue text-sm font-semibold border-white text-white px-4 py-1 rounded-md'>Add to Cart</button>
  
        </div>
     </div>

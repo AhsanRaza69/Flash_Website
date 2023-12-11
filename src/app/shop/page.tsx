@@ -30,7 +30,7 @@ const shopPage = async() => {
         </div>
         <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6  ">
           <div className="  w-full col-span-2  ">  
-          <div className=" flex items-center justify-between w-full">
+          <div className=" flex  items-center justify-between w-full">
             <h3 className=' text-darkText'>Showing all 8 results
              </h3>
                <label htmlFor="">
