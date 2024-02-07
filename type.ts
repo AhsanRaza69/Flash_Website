@@ -23,6 +23,7 @@
 export interface stateProps{
   shop: {
     ProductData: [];
+    ShopCart:[]
       userInfo: {};
     };
 }

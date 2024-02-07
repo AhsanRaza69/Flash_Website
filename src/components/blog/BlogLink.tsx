@@ -21,8 +21,8 @@ const BlogLink = ({title,Links}:Props) => {
         <div className='flex flex-col gap-3 mt-3'>
 
             {
-               Links.map((item:any)=>(
-                <div className=' '>
+               Links.map((item:any,ind:any)=>(
+                <div key={ind} className=' '>
 
                   <Link href={item.Link} className=' flex text-[12px] font-medium text-darkText items-center'>
                      <IoIosArrowForward  className="mr-2  text-black" />

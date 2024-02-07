@@ -1,3 +1,5 @@
+import { Products } from "../../type";
+
 export const getProducts = async()=>{
     const res = await fetch("https://fakestoreapiserver.reactbd.com/smart")
     if(!res.ok){
@@ -15,3 +17,9 @@ export const getTrendingProducts = async () => {
     }
     return res.json();  
   };
+
+  export const GetSingleProduct =  async (_id:number)=>{
+     const item = await getProducts()
+     const singleItem = await item.find((product:Products)=> product._id === _id)
+     return singleItem
+  }

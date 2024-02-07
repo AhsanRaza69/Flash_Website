@@ -9,7 +9,7 @@ import {BiLogoFacebook,BiLogoInstagram,BiLogoTwitter,BiLogoLinkedin} from 'react
 
 export const TopHeader = () => {
   return (
-    <div className=" hidden  fixed   z-50   top-0 left-0 bg-blue-50 w-full h-10 lg:flex items-center md:px-8 lg:px-20 ">
+    <Container className=" hidden  fixed   z-50   top-0 left-0 bg-blue-50 w-full h-10 lg:flex items-center md:px-8 lg:px-20 ">
      
         <div className=' mx-auto flex items-center w-full justify-between'>
             <div className=' font-light text-gray-600 flex items-center md:gap-x-4 lg:gap-x-6'>
@@ -32,7 +32,7 @@ export const TopHeader = () => {
        </div>
         </div>
     
-    </div>
+    </Container>
   )
 }
 

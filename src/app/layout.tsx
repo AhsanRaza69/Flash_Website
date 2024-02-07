@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
 import './globals.css'
 import TopHeader from '@/components/topHeader'
 import Header from '@/components/Header'
@@ -8,12 +7,7 @@ import Footer from '@/components/footer/Footer'
 import Uparrow from '@/components/Uparrow'
 import Layout from '@/components/Layout'
 
-const montserrat = Montserrat({
-  weight: ['400', '700'],
-  style: ['normal', 'italic'],
-  subsets: ['latin'],
-  display: 'swap',
-})
+
 
 export const metadata: Metadata = {
   title: 'Flash – MultiPurpose WordPress Theme',
@@ -27,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} w-full`}>
+      <body className={`w-full`}>
         <Layout>
       <TopHeader/>
       <Header/>

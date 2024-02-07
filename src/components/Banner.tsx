@@ -23,9 +23,10 @@ const Banner = () => {
     
       const {onClick} = props
       return(
-        <div className="p-3 hidden bg-slate-100 hover:text-orange-600 hover:bg-white cursor-pointer duration-200 rounded-sm text-2xl lg:flex items-center justify-center z-20 absolute   right-5 top-[40%]" onClick={onClick}>
+        <div className="p-3 hidden bg-slate-100 hover:text-orange-600 hover:bg-white cursor-pointer duration-200 rounded-sm text-2xl lg:flex items-center justify-center z-20 absolute      right-5 top-[40%]" onClick={onClick}>
           <PiCaretRightLight/>
-    </div>
+    </div> 
+    
       )
       
   }
@@ -33,10 +34,11 @@ const Banner = () => {
   var settings = {
     dots: false,
     arrows:true,
-    autoPlay:true,
+    autoplay:true,
     infinite: true,
+    peed: 1000,
     slidesToShow: 1,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     nextArrow:<NextArrow  />,
     prevArrow:<PrevArrow/>
   };
@@ -53,7 +55,7 @@ const Banner = () => {
           height={600}
           priority
           
-           className=" w-full h-full relative" />
+           className=" w-full md:h-[80vh] relative" />
            <BannerText title="One Click Demo Importer" para=" Drag and drop builder makes it possible to create any kind of layout you wish for." linkName="download more" Linked="/"/>
       </div>
        {/* Slider#2 */}
@@ -64,7 +66,7 @@ const Banner = () => {
           width={1000}
           height={600}
           
-           className=" w-full h-full relative" />
+           className=" w-full md:h-[80vh] relative" />
            <BannerText title="Awesome Multi-Purpose Theme" para="It looks perfect on any device and retina display" linkName="read more" Linked="/"/>
       </div>
        {/* Slider#3 */}
@@ -75,7 +77,7 @@ const Banner = () => {
           width={1000}
           height={600}
           
-           className=" w-full h-full relative" />
+           className=" w-full md:h-[80vh] relative" />
            <BannerText title="Drag and Drop Page Builder" para="Drag and drop builder makes it possible to create any kind of layout you wish for." linkName="view feature" Linked="/"/>
       </div>
       
