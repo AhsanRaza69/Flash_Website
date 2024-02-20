@@ -19,7 +19,7 @@ const ProductCart = ({item}:Props) => {
   const dispatch = useDispatch()
   return (
     
-    <div className="   flex flex-col w-full h-[260px] items-center my-4   rounded-sm relative   ">
+    <div className="   flex flex-col w-full h-[280px] items-center my-4   rounded-sm relative   ">
 
          
        <div className=" flex flex-col h-full w-full   ">
